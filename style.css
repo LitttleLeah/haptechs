@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,300&family=Raleway:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif; */
+}
+
+section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    position: realtive;
+    width: 100%;
+    background: url(./IMG/BG-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+}
+
+header .logo {
+    position: relative;
+    /* font-size: 2rem; */
+    background: url(./IMG/Logo_32px.png);
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+header .navigation {
+    display: flex;
+    position: relative;
+}
+
+header .navigation li {
+    list-style: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+header .navigation li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 40px;
+}
+
+header .navigation li a:hover {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background: -webkit-linear-gradient(#ec396e, #f9ae40);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content .contentBox h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    color: #131429;
+}
+
+.content .contentBox p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    color: #131429;
+    font-weight: 500;
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+
+.content .contentBox a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #f9ae40;
+    transition: background-color 0.5s ease;
+    color: #131429;
+    font-weight: 700;
+    font-size: 1.7rem;
+    
+}
+
+.content .contentBox a:hover {
+    background: #ec396e;
+    color: #FFF;
+}
+
+.socials {
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+}
+
+.socials li {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials li a {
+    display: inline-block;
+    position: relative;
+    margin-right: 20px; 
+    color: #fff;
+    font-size: 2.3rem;
+}
+
+.socials li a:hover {
+    background: -webkit-linear-gradient(#ec396e, #f9ae40);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Mobile */
+@media (max-width: 990px) {
+    header {
+        padding: 15px 40px;
+    }
+    section {
+        background: url(./IMG/BG-1.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 40px;
+    }
+    .content .contentBox h2 {
+        font-size: 2.5em;
+    }
+    .content .contentBox p {
+        font-size: 1em;
+    }
+    header .navigation {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #131429;
+        z-index: 10;
+    }
+    header .navigation.active {
+        display: flex;
+    }
+    header .navigation li a {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    .toggleMenu {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(./IMG/menu.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px;
+        cursor: pointer;
+        z-index: 11;
+    }
+
+    .toggleMenu.active {
+        background: url(./IMG/close.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px;
+    }
+}
